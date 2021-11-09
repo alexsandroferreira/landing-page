@@ -1,0 +1,60 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+
+    border-bottom: 0.1rem solid var(--light-gray-color);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
+.menu h1 {
+    font-size: 2.4em;
+    color: var(--primary-color);
+}
+
+.menu h1 a {
+    color: inherit;
+    /*herda a cor do teu pai*/
+}
+
+.menu ul {
+    /*posso usar a própria ul como conteiner do menu*/
+    display: flex;
+
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.9rem;
+    position: relative;
+    color: var(--primary-color);
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    width: 0;
+    height: 0.25rem;
+    background: var(--color-header);
+    transition: all 0.25s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    letter-spacing: 0.5px;
+    width: 50%;
+    left: 25%;
+}
